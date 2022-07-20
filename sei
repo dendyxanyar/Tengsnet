@@ -146,12 +146,6 @@ sudo systemctl restart seid
 source $HOME/.bash_profile
 sleep 1
 
-SEI_WALLET_ADDRESS=$(seid keys show $WALLET -a)
-SEI_VALOPER_ADDRESS=$(seid keys show $WALLET --bech val -a)
-echo 'export SEI_WALLET_ADDRESS='${SEI_WALLET_ADDRESS} >> $HOME/.bash_profile
-echo 'export SEI_VALOPER_ADDRESS='${SEI_VALOPER_ADDRESS} >> $HOME/.bash_profile
-source $HOME/.bash_profile
-
 echo '=============== SETUP FINISHED ==================='
 
 break
@@ -183,6 +177,13 @@ break
 "Create Wallet")
 seid keys add $WALLET
 sleep 1
+
+SEI_WALLET_ADDRESS=$(seid keys show $WALLET -a)
+SEI_VALOPER_ADDRESS=$(seid keys show $WALLET --bech val -a)
+echo 'export SEI_WALLET_ADDRESS='${SEI_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export SEI_VALOPER_ADDRESS='${SEI_VALOPER_ADDRESS} >> $HOME/.bash_profile
+source $HOME/.bash_profile
+
 echo "========================================================================================================================"
 echo "Simpen Pharse Bang, Nanti Nyesel Kalo ga Simpen"
 echo "========================================================================================================================"
@@ -193,6 +194,13 @@ break
 "Restore Wallet")
 seid keys add $WALLET --recover
 sleep 1
+
+SEI_WALLET_ADDRESS=$(seid keys show $WALLET -a)
+SEI_VALOPER_ADDRESS=$(seid keys show $WALLET --bech val -a)
+echo 'export SEI_WALLET_ADDRESS='${SEI_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export SEI_VALOPER_ADDRESS='${SEI_VALOPER_ADDRESS} >> $HOME/.bash_profile
+source $HOME/.bash_profile
+
 echo "========================================================================================================================"
 echo "Import Done Bang"
 echo "========================================================================================================================"
@@ -204,7 +212,7 @@ break
 seid keys list
 sleep 1
 echo "========================================================================================================================"
-echo "Import Done Bang"
+echo "Tuh bang"
 echo "========================================================================================================================"
 
 break
