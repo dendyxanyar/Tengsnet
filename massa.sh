@@ -14,14 +14,10 @@ echo "==========================================================================
 PS3='Select an action: '
 options=(
 "Open Port"
-"Check Log"
-"Check Sync"
 "Install Node"
-"Create Wallet"
-"Restore Wallet"
-"Check Address Wallet"
-"Create Validator"
-"Edit Validator"
+"Check Log"
+"Massa Node"
+"Massa Client"
 "Exit")
 select opt in "${options[@]}"
 do
